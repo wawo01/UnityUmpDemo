@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSdk.Scripts", "MaxSdk.Scripts.csproj", "{6a74c3d9-f4fb-6988-03e2-02dfe1ab309d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{f461fb0f-10ea-e991-d268-5c153208d76d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSdk.Scripts.IntegrationManager.Editor", "MaxSdk.Scripts.IntegrationManager.Editor.csproj", "{3bb98d6d-ddfc-3fc1-edee-bf6c4d1105b8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSdk.Scripts.Editor", "MaxSdk.Scripts.Editor.csproj", "{2ce90471-5270-7884-9ad2-ee26b02dfcb3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6a74c3d9-f4fb-6988-03e2-02dfe1ab309d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6a74c3d9-f4fb-6988-03e2-02dfe1ab309d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f461fb0f-10ea-e991-d268-5c153208d76d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f461fb0f-10ea-e991-d268-5c153208d76d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3bb98d6d-ddfc-3fc1-edee-bf6c4d1105b8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3bb98d6d-ddfc-3fc1-edee-bf6c4d1105b8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ce90471-5270-7884-9ad2-ee26b02dfcb3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ce90471-5270-7884-9ad2-ee26b02dfcb3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
