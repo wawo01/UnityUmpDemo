@@ -38,7 +38,9 @@
   <ItemGroup>
      <Compile Include="Assets\Script\TestCs.cs" />
      <Compile Include="Assets\Script\UMPConsentUtils.cs" />
+     <None Include="Assets\GoogleMobileAds\link.xml" />
      <None Include="Assets\MaxSdk\Mediation\MediationAdapters.txt" />
+     <None Include="Assets\GoogleMobileAds\GoogleMobileAds_version-8.5.3_manifest.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.30f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -215,6 +217,24 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.30f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.30f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -661,6 +681,10 @@
     <ProjectReference Include="MaxSdk.Scripts.IntegrationManager.Editor.csproj">
       <Project>{3bb98d6d-ddfc-3fc1-edee-bf6c4d1105b8}</Project>
       <Name>MaxSdk.Scripts.IntegrationManager.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{970cd609-8fa7-6049-ac55-35f82cff53ee}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

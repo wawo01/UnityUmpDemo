@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GoogleMobileAds.Ump.Api;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class TestCs : MonoBehaviour
@@ -12,20 +13,65 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
     // Start is called before the first frame update
     void Start()
     {
+        
+         var debugSettings = new ConsentDebugSettings
+         {
+             // Geography appears as in EEA for debug devices.
+             DebugGeography = DebugGeography.EEA,
+             TestDeviceHashedIds = new List<string>
+             {
+                 "6B268B4102A1961812FC511632EEAB9B" //this is my android device,please change to your device
+             }
+         };
+             // Set tag for under age of consent.
+        // Here false means users are not under age of consent.
+        ConsentRequestParameters request = new ConsentRequestParameters
+        {
+            TagForUnderAgeOfConsent = false,
+            ConsentDebugSettings = debugSettings,
+        };
 
+        // Check the current consent information status.
+        ConsentInformation.Update(request, OnConsentInfoUpdated);
     }
+    void OnConsentInfoUpdated(FormError consentError)
+    {
+        if (consentError != null)
+        {
+            // Handle the error.
+            UnityEngine.Debug.LogError(consentError);
+            return;
+        }
+        // If the error is null, the consent information state was updated.
+        // You are now ready to check if a form is available.
+        ConsentInformation.Reset();
+        ConsentForm.LoadAndShowConsentFormIfRequired((FormError formError) =>
+        {
+            if (formError != null)
+            {
+                // Consent gathering failed.
+                UnityEngine.Debug.LogError(consentError);
+                return;
+            }
 
+            // Consent has been gathered.
+            if (ConsentInformation.CanRequestAds())
+            {
+                Debug.Log("CanRequestAds");
+                // MobileAds.Initialize((InitializationStatus initstatus) =>
+                // {
+                //     // TODO: Request an ad.
+                // });
+            }
+        });
+    }
 
     public void onInitClick()
     {
         MaxSdkCallbacks.OnSdkInitializedEvent += (MaxSdkBase.SdkConfiguration sdkConfiguration) =>
         {
             // AppLovin SDK is initialized, start loading ads
-             Debug.Log("sdk inited : " + sdkConfiguration.ToString());
-             Debug.Log("sdk inited : isGDPR? " + UMPConsentUtils.IsGDPR().ToString());
-             Debug.Log("sdk inited : CanShowPersonalizedAds? " + UMPConsentUtils.CanShowPersonalizedAds().ToString());
-             
-               Debug.Log("sdk inited : CanShowPersonalizedAds2? " + UMPConsentUtils.CanShowPersonalizedAds2().ToString());
+            Debug.Log("sdk inited : " + sdkConfiguration.ToString());
         };
 
         MaxSdk.SetSdkKey("BLZ3nWD4mwe_7TFhC7kqaUqZMz32l9nxVL-GtCKc6-cEWsxizeXT8L7UJAX2KJ-qey4W9P7FNkUvaPcT295AUD");
@@ -103,11 +149,13 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
 
     public void showInter()
     {
-         Debug.Log("showInter: ");
+        Debug.Log("showInter: ");
         if (MaxSdk.IsInterstitialReady(adUnitId))
         {
             MaxSdk.ShowInterstitial(adUnitId);
-        }else{
+        }
+        else
+        {
             Debug.Log("showInter: not ready");
         }
     }

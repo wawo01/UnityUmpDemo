@@ -2,6 +2,7 @@
   <packages>
     <package>com.applovin.mediation:google-adapter:[22.3.0.0]</package>
     <package>com.applovin:applovin-sdk:12.0.0</package>
+    <package>com.google.android.gms:play-services-ads:[22.3.0]</package>
     <package>com.google.android.ump:user-messaging-platform:2.1.0</package>
   </packages>
   <files>

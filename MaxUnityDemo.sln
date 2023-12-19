@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSdk.Scripts.IntegrationM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSdk.Scripts.Editor", "MaxSdk.Scripts.Editor.csproj", "{2ce90471-5270-7884-9ad2-ee26b02dfcb3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMobileAds.Editor", "GoogleMobileAds.Editor.csproj", "{970cd609-8fa7-6049-ac55-35f82cff53ee}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,8 @@ Global
 		{3bb98d6d-ddfc-3fc1-edee-bf6c4d1105b8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ce90471-5270-7884-9ad2-ee26b02dfcb3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2ce90471-5270-7884-9ad2-ee26b02dfcb3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970cd609-8fa7-6049-ac55-35f82cff53ee}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970cd609-8fa7-6049-ac55-35f82cff53ee}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
