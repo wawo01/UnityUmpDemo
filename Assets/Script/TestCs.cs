@@ -22,6 +22,10 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
         {
             // AppLovin SDK is initialized, start loading ads
              Debug.Log("sdk inited : " + sdkConfiguration.ToString());
+             Debug.Log("sdk inited : isGDPR? " + UMPConsentUtils.IsGDPR().ToString());
+             Debug.Log("sdk inited : CanShowPersonalizedAds? " + UMPConsentUtils.CanShowPersonalizedAds().ToString());
+             
+               Debug.Log("sdk inited : CanShowPersonalizedAds2? " + UMPConsentUtils.CanShowPersonalizedAds2().ToString());
         };
 
         MaxSdk.SetSdkKey("BLZ3nWD4mwe_7TFhC7kqaUqZMz32l9nxVL-GtCKc6-cEWsxizeXT8L7UJAX2KJ-qey4W9P7FNkUvaPcT295AUD");

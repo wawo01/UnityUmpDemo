@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\TestCs.cs" />
+     <Compile Include="Assets\Script\UMPConsentUtils.cs" />
      <None Include="Assets\MaxSdk\Mediation\MediationAdapters.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.30f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
