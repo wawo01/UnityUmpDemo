@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\TestCs.cs" />
-     <Compile Include="Assets\Script\UMPConsentUtils.cs" />
+     <Compile Include="Assets\Script\UmpHelper.cs" />
+     <Compile Include="Assets\UmpHelper\API\UMPHelperApi.cs" />
+     <Compile Include="Assets\UmpHelper\API\UMPHelperCall.cs" />
      <None Include="Assets\GoogleMobileAds\link.xml" />
      <None Include="Assets\MaxSdk\Mediation\MediationAdapters.txt" />
      <None Include="Assets\GoogleMobileAds\GoogleMobileAds_version-8.5.3_manifest.txt" />
@@ -218,23 +220,23 @@
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.30f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMobileAds.Common">
         <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Ump.Unity">
-        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    <Reference Include="GoogleMobileAds.Core">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds">
         <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMobileAds.Ump">
         <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+        <HintPath>C:/Users/51467/MaxUnityDemo/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.30f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

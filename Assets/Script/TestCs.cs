@@ -1,6 +1,7 @@
 ﻿using GoogleMobileAds.Ump.Api;
 using System.Collections;
 using System.Collections.Generic;
+using UMPHelper;
 using UnityEngine;
 public class TestCs : MonoBehaviour
 {
@@ -13,17 +14,17 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
     // Start is called before the first frame update
     void Start()
     {
-        
-         var debugSettings = new ConsentDebugSettings
-         {
-             // Geography appears as in EEA for debug devices.
-             DebugGeography = DebugGeography.EEA,
-             TestDeviceHashedIds = new List<string>
+
+        var debugSettings = new ConsentDebugSettings
+        {
+            // Geography appears as in EEA for debug devices.
+            DebugGeography = DebugGeography.EEA,
+            TestDeviceHashedIds = new List<string>
              {
                  "6B268B4102A1961812FC511632EEAB9B" //this is my android device,please change to your device
              }
-         };
-             // Set tag for under age of consent.
+        };
+        // Set tag for under age of consent.
         // Here false means users are not under age of consent.
         ConsentRequestParameters request = new ConsentRequestParameters
         {
@@ -33,6 +34,8 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
 
         // Check the current consent information status.
         ConsentInformation.Update(request, OnConsentInfoUpdated);
+
+
     }
     void OnConsentInfoUpdated(FormError consentError)
     {
@@ -58,10 +61,25 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
             if (ConsentInformation.CanRequestAds())
             {
                 Debug.Log("CanRequestAds");
-                // MobileAds.Initialize((InitializationStatus initstatus) =>
-                // {
-                //     // TODO: Request an ad.
-                // });
+
+                UMPHelperApi umpHelperApi = new UMPHelperApi();
+                if (!umpHelperApi.isGDPR())
+                {
+                    // 初始化pssdk等sdk
+                }
+                else
+                {
+                    if (umpHelperApi.isUmpAllowed())
+                    {
+                        // 正常初始化其他sdk
+                    }
+                    else
+                    {
+                        // 在初始化tasdk之前，调用方法disableAccessPrivacyInformation
+                        // 正常初始化其他sdk
+                    }
+                }
+              
             }
         });
     }
@@ -72,11 +90,30 @@ string adUnitId = "YOUR_IOS_AD_UNIT_ID";
         {
             // AppLovin SDK is initialized, start loading ads
             Debug.Log("sdk inited : " + sdkConfiguration.ToString());
+
+             UMPHelperApi umpHelperApi = new UMPHelperApi();
+                if (!umpHelperApi.isGDPR())
+                {
+                    // 初始化pssdk等sdk
+                }
+                else
+                {
+                    if (umpHelperApi.isUmpAllowed())
+                    {
+                        // 正常初始化其他sdk
+                    }
+                    else
+                    {
+                        // 在初始化tasdk之前，调用方法disableAccessPrivacyInformation
+                        // 正常初始化其他sdk
+                    }
+                }
         };
 
         MaxSdk.SetSdkKey("BLZ3nWD4mwe_7TFhC7kqaUqZMz32l9nxVL-GtCKc6-cEWsxizeXT8L7UJAX2KJ-qey4W9P7FNkUvaPcT295AUD");
         MaxSdk.SetUserId("USER_ID_001");
         MaxSdk.InitializeSdk();
+
     }
 
     // Update is called once per frame

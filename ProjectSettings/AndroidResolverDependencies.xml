@@ -2,6 +2,7 @@
   <packages>
     <package>com.applovin.mediation:google-adapter:[22.3.0.0]</package>
     <package>com.applovin:applovin-sdk:12.0.0</package>
+    <package>com.avidly.umphelper:umphelper:1.0.1</package>
     <package>com.google.android.gms:play-services-ads:[22.3.0]</package>
     <package>com.google.android.ump:user-messaging-platform:2.1.0</package>
   </packages>
@@ -46,6 +47,7 @@
     <file>Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar</file>
     <file>Assets/Plugins/Android/com.applovin.applovin-sdk-12.0.0.aar</file>
     <file>Assets/Plugins/Android/com.applovin.mediation.google-adapter-22.3.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.avidly.umphelper.umphelper-1.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-22.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-22.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-18.0.0.aar</file>
